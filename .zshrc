@@ -33,6 +33,7 @@ alias -g lttt=' exa --tree -D -L 4 -I ${TREE_IGNORE}'
 alias -g ltttt=' exa --tree -D -L 5 -I ${TREE_IGNORE}'
 
 alias hl="history | less"
+alias hg="history | grep"
 
 # conditional aliases
 if [ "$TERM" = "xterm-kitty" ]; then
