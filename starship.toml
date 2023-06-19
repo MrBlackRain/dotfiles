@@ -1,0 +1,69 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """\
+$os\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+$conda\
+$python\
+$cmd_duration $time\
+$line_break\
+$character\
+"""
+
+[os]
+format = "[$symbol ]($style)"
+disabled = false
+
+[os.symbols]
+Arch = "󰣇"
+Linux = ""
+Macos = ""
+Ubuntu = ""
+Windows = ""
+
+[fill]
+symbol = " "
+
+[directory]
+format = "[ $path ]($style)"
+style = "#57C7FF"
+read_only = " "
+truncation_length = 4
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+[git_branch]
+symbol = ""
+format = "[$symbol$branch]($style) "
+style = "242"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "red"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+
+[conda]
+ignore_base = true
+
+[python]
+symbol = ""
+format = '[ $symbol ($version) (at $virtualenv) ]($style)'
+
+[time]
+disabled = false
+time_format = "%T"             # Hour:Minute Format
+format = '[  $time ]($style)'
+
+[cmd_duration]
+format = "[ 󱦟 $duration]($style)"
