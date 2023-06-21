@@ -12,6 +12,7 @@ $conda\
 $python\
 $cmd_duration $time\
 $line_break\
+$status\
 $character\
 """
 
@@ -28,6 +29,10 @@ Windows = ""
 
 [fill]
 symbol = " "
+
+[status]
+map_symbol = true
+disabled = false
 
 [directory]
 format = "[ $path ]($style)"
