@@ -2,6 +2,8 @@
 # System stuff
 # ============================================================
 
+export EDITOR=nvim
+
 # Additional executable pathes
 path+=(~/go/bin)
 path+=(~/.local/bin)
@@ -13,8 +15,6 @@ export PATH
 # ============================================================
 # Asiases 
 # ============================================================
-
-# alias -g history='history -E'
 
 # vim
 alias -g v='nvim'
