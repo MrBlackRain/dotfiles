@@ -10,7 +10,7 @@ path+=(~/.local/bin)
 path+=(~/.yarn/bin)
 
 if [[ $(uname) == "Linux" ]] && [ -d "/home/linuxbrew" ]; then
-path+=(/home/linuxbrew/.linuxbrew/bin)
+  path+=(/home/linuxbrew/.linuxbrew/bin)
 fi
 
 export PATH
@@ -33,7 +33,7 @@ fi
 if [ $(uname -m) = "arm64" ]; then
   export DOCKERTEX_DEFAULT_TAG="arm64-texlive2018"
 else
-export DOCKERTEX_DEFAULT_TAG="texlive2018"
+  export DOCKERTEX_DEFAULT_TAG="texlive2018"
 fi
 export DOCKERTEX_ENGINE="docker"
 
