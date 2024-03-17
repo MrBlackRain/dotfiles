@@ -7,9 +7,10 @@ local capabilities = config.capabilities
 
 local lspconfig = require "lspconfig"
 
-lspconfig[language_config.lsp].setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "python" },
-})
-
+for _, value in ipairs(language_config.lsp) do
+  lspconfig[value].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "python" },
+  })
+end
