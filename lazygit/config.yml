@@ -1,0 +1,7 @@
+gui:
+  language: "en"
+git:
+  # requires external tool git-delta (cargo install git-delta)
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
