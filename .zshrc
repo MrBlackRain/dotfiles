@@ -15,7 +15,9 @@ fi
 
 export PATH
 
-source "$HOME/.cargo/env"
+if [ -d "$HOME/.cargo" ]; then
+  source "$HOME/.cargo/env"
+fi
 
 # ============================================================
 # MacOS Specific 
@@ -111,7 +113,7 @@ unsetopt autocd
 # Keybindings
 # ============================================================
 
-bindkey '^R' .history-incremental-search-backward # for TMUX compatibility
+bindkey "ç" fzf-cd-widget # MacOS rebind Alt-C
 
 # ============================================================
 # Aliases 
@@ -135,9 +137,11 @@ alias -g ltttt=' eza --tree -D -L 5 -I ${TREE_IGNORE}'
 
 alias hg="history | grep"
 
+alias lg="lazygit"
+
 # conditional aliases
 if [ "$TERM" = "xterm-kitty" ]; then
-	alias ssh="kitty +kitten ssh"
+    alias ssh="kitty +kitten ssh"
 fi
 
 # ============================================================
