@@ -4,7 +4,6 @@
 
 export EDITOR=nvim
 
-# Additional executable pathes
 # Additional executable paths
 path+=(~/go/bin)
 path+=(~/.local/bin)
@@ -19,7 +18,6 @@ export PATH
 source "$HOME/.cargo/env"
 
 # ============================================================
-# MacOS Spesific 
 # MacOS Specific 
 # ============================================================
 
@@ -47,7 +45,6 @@ if [ type brew &>/dev/null ];
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-  # init autocomplits
   # init autocompletes
   autoload -Uz compinit
   compinit
@@ -117,7 +114,6 @@ unsetopt autocd
 bindkey '^R' .history-incremental-search-backward # for TMUX compatibility
 
 # ============================================================
-# Asiases 
 # Aliases 
 # ============================================================
 
