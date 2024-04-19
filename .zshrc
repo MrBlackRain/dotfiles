@@ -5,6 +5,7 @@
 export EDITOR=nvim
 
 # Additional executable pathes
+# Additional executable paths
 path+=(~/go/bin)
 path+=(~/.local/bin)
 path+=(~/.yarn/bin)
@@ -19,6 +20,7 @@ source "$HOME/.cargo/env"
 
 # ============================================================
 # MacOS Spesific 
+# MacOS Specific 
 # ============================================================
 
 if [[ $(uname) == "Darwin" ]]; then
@@ -46,6 +48,7 @@ then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
   # init autocomplits
+  # init autocompletes
   autoload -Uz compinit
   compinit
 fi
@@ -115,6 +118,7 @@ bindkey '^R' .history-incremental-search-backward # for TMUX compatibility
 
 # ============================================================
 # Asiases 
+# Aliases 
 # ============================================================
 
 # vim
